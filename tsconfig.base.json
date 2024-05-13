@@ -10,11 +10,26 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "useUnknownInCatchVariables": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@rmg-challenges/client": ["libs/client/src/index.ts"],
+      "@rmg-challenges/client/*": ["libs/client/src/*"],
+      "@rmg-challenges/data-access": ["libs/data-access/src/index.ts"],
+      "@rmg-challenges/rendering": ["libs/rendering/src/index.ts"],
+      "@rmg-challenges/server": ["libs/server/src/index.ts"],
+      "@rmg-challenges/task-processing": ["libs/task-processing/src/index.ts"],
+      "@rmg-challenges/titles": ["libs/titles/src/index.ts"],
+      "@rmg-challenges/types": ["libs/types/src/index.ts"],
+      "@rmg-challenges/ui": ["libs/ui/src/index.ts"],
+      "@rmg-challenges/utils": ["libs/utils/src/index.ts"]
+    },
+    "typeRoots": ["types", "node_modules/@types"]
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -11,13 +11,25 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
+    "types": ["jest", "node"],
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "types": ["jest", "node"]
+    "strictNullChecks": false,
+    "noImplicitAny": false
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
-  "exclude": ["node_modules", "jest.config.ts", "**/*.spec.ts", "**/*.test.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "next-env.d.ts",
+    "next/types/**/*.ts",
+    "../../apps/web/.next/types/**/*.ts",
+    "../../apps/web/dist/.next/types/**/*.ts",
+    "../../dist/apps/web/.next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules", "jest.config.ts"]
 }
